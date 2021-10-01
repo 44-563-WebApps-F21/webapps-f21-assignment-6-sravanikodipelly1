@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <title>LAB 06</title>
+ </head>
+<body>
+
+<h2>Pass phrase by sravani</h2>
+
+<form>
+    <label for="passwrd">Enter the secret phrase </label>
+    <input type="password" id="passwrd" name="passwrd" placeholder="Let me in">
+    <br>
+    <br>
+    <label for="Check">Enter a phrase </label>
+    <input type="text" id="Check" name="Check">
+    <br><br>
+    <input type="button" onclick="processPhrase()" value="Check the phrase">
+</form>
+
+
+
+<p id="result">Result </p>
+
+<script> 
+
+function processPhrase()
+{
+    let correct = 0;
+    let wrong = 0;
+
+    password = document.getElementById("passwrd").value;
+    check = document.getElementById("Check").value;
+
+    out = document.getElementById("result");
+    if(passwordd == check)
+    {
+        correct+=1;
+        alert("Access allowed");
+        out.innerHTML = "Correct: "+correct;
+    }
+    else
+    {
+        wrong+=1;
+        alert("Access denied");
+        out.innerHTML = "Wrong: "+wrong;
+    }
+}
+
+
+</script>
+
+</body>
+</html> 
