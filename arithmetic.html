@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hersheys things</title>
+    </head>
+ 
+<body>
+
+<h2>SravaniKodipelly computes</h2>
+
+<form>
+    <label for="form1_base">Enter a base </label>
+    <input type="number" id="form1_base"  placeholder="Let me in">
+    <br>
+    <br>
+    <label for="form2_exponential">Enter an exponent </label>
+    <input type="number" id="form2_exponential"placeholder="Let me in" >
+    <br><br>
+    <input type="button" onclick="powers()" text="Compute" value="check the number">
+</form>
+
+
+
+<p id="result">Text will be displayed </p>
+
+<script> 
+
+function resolveForm (){
+    console.log("Getting form values")
+    age = document.getElementById("form1_age").value
+    nick = document.getElementById("form1_nick").value
+    confirmed = confirm("Are these the values? "+age+" and "+nick)
+    
+    out = document.getElementById("result")
+    if(confirmed){
+        out.innerHTML = "Values were confirmed"
+    } else {
+        out.innerHTML = "Values were not confirmed"
+    }
+}
+
+let gettingvalue=3;
+function powers()
+{
+console.log("Getting the values")
+base=document.getElementById("form1_base").value;
+exponential=document.getElementById("form2_exponential").value;
+var res=" ";
+out=document.getElementById("result")
+for(let i=1;i<=exponential;i++)
+{
+    
+    res+= Math.pow(base,i);
+}
+out.innerHTML=res;
+}
+</script>
+
+</body>
+</html> 
