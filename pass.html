@@ -7,6 +7,8 @@
 
 <h2>Pass phrase by sravani</h2>
 
+   
+
 <form>
     <label for="passwrd">Enter the secret phrase </label>
     <input type="password" id="passwrd" name="passwrd" placeholder="Let me in">
@@ -22,6 +24,11 @@
 
 <p id="result">Result </p>
 
+
+<div class="container">
+    <img src="elephant.jpg"  alt="Elephant jpg" height="200" width="200" onclick="newImage()" id="img">
+</div>
+
 <script> 
 
 function processPhrase()
@@ -33,7 +40,7 @@ function processPhrase()
     check = document.getElementById("Check").value;
 
     out = document.getElementById("result");
-    if(passwordd == check)
+    if(password == check)
     {
         correct+=1;
         alert("Access allowed");
@@ -46,14 +53,32 @@ function processPhrase()
         out.innerHTML = "Wrong: "+wrong;
     }
 }
-    <div class="container">
-    <img src="elephant.jpg" class="img-fluid" alt="Elephant.jpg"height="200"width="200">
-    </div>
-    
 
+ let usingImage = 1;
+
+function newImage()
+{
+    switch(usingImage)
+    {
+        case 1:
+            document.getElementById('img').src="elephant.jpg";
+            usingImage=2;
+            break;
+        case 2:
+            document.getElementById('img').src="kangaroo.jpg";
+            usingImage=3;
+            break;
+        case 3:
+            document.getElementById('img').src="Donkey.jpg";
+            usingImage=1;
+            break;
+    }
+}
 
 
 </script>
+
+
 
 </body>
 </html> 
