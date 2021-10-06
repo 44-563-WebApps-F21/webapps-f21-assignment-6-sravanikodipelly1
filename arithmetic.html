@@ -22,7 +22,17 @@
 
 
 <p id="result">Text will be displayed </p>
-
+<form>
+    <input type="radio" id="plus" name="operator" value="plus" onclick="processRadio()">
+    <label for="+">plus</label></br>
+    <input type="radio" id="minus" name="operator" value="minus" onclick="processRadio()">
+    <label for="-">minus</label></br>
+    <input type="radio" id="times" name="operator" value="times" onclick="processRadio()">
+    <label for="*">times</label></br>
+    <input type="radio" id="divide" name="operator" value="divide" onclick="processRadio()">
+    <label for="/">divide</label>
+</form>
+<p id="outcome">Operations will be displayed </p>
 <script> 
 
 function resolveForm (){
@@ -54,6 +64,43 @@ for(let i=1;i<=exponential;i++)
 }
 out.innerHTML=res;
 }
+
+
+function processRadio()
+{
+console.log("Getting the operator")
+base=document.getElementById("form1_base").value;
+exponential=document.getElementById("form2_exponential").value;
+plus=document.getElementById("plus").checked;
+minus=document.getElementById("minus").checked;
+times=document.getElementById("times").checked;
+divide=document.getElementById("divide").checked;
+var res=0;
+//out=document.getElementById("res")//
+if(plus){
+     res=0;
+    res=(Number)(base)+(Number)(exponential)
+    document.getElementById("outcome").innerHTML=res;
+}
+if(minus){
+     res=0;
+    res=(base)-(exponential)
+    document.getElementById("outcome").innerHTML=res;
+}
+if(times){
+     res=0;
+    res=(base)*(exponential)
+    document.getElementById("outcome").innerHTML=res;
+}
+if(divide){
+     res=0;
+    res=(base)/(exponential)
+    document.getElementById("outcome").innerHTML=res;
+}
+
+
+}
+
 </script>
 
 </body>
