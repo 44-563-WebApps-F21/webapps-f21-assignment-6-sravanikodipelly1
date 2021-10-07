@@ -2,26 +2,36 @@
 <html>
     <head>
         <title>Hersheys things</title>
+        <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" 
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" 
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
     </head>
  
-<body>
+<body class="container">
 
-<h2>SravaniKodipelly computes</h2>
+<h2 class="text-success">SravaniKodipelly computes</h2>
 
 <form>
-    <label for="form1_base">Enter a base </label>
+    <label for="form1_base" class="text-danger">Enter a base </label>
     <input type="number" id="form1_base"  placeholder="Let me in">
     <br>
     <br>
-    <label for="form2_exponential">Enter an exponent </label>
+    <label for="form2_exponential" class="text-danger">Enter an exponent </label>
     <input type="number" id="form2_exponential"placeholder="Let me in" >
     <br><br>
-    <input type="button" onclick="powers()" text="Compute" value="check the number">
+    <input type="button" onclick="powers()" text="Compute" value="check the number" class="btn btn-primary">
 </form>
 
 
 
-<p id="result">Text will be displayed </p>
+<p id="result" class="text-info">Text will be displayed </p>
 <form>
     <input type="radio" id="plus" name="operator" value="plus" onclick="processRadio()">
     <label for="+">plus</label></br>
@@ -32,7 +42,7 @@
     <input type="radio" id="divide" name="operator" value="divide" onclick="processRadio()">
     <label for="/">divide</label>
 </form>
-<p id="outcome">Operations will be displayed </p>
+<p id="outcome" class="text-success">Operations will be displayed </p>
 <script> 
 
 function resolveForm (){
